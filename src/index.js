@@ -1,26 +1,19 @@
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const collection = require("./config");//mongoose
+const collection = require("./config");
 const app = express();
-
-// Middleware to parse JSON and URL-encoded bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-// Using EJS as view engine
 app.set('view engine', 'ejs');
-app.use(express.static("public"));
-
-// Render login page
+app.use(express.static("public")); 
 app.get('/', (req, res) => {
     res.render('login');
 });
-
-// Render signup page
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
+//signup
 app.post("/signup", async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -41,8 +34,7 @@ app.post("/signup", async (req, res) => {
         res.status(500).send("Error registering user. Please try again later.");
     }
 });
-
-// Handle user login
+//user login
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -54,12 +46,15 @@ app.post('/login', async (req, res) => {
         if (!passwordMatch) {
             return res.send('Incorrect password');
         }
-        res.render('home');
+        res.render('welcome'); 
 
     } catch (error) {
         console.error("Error logging in:", error);
         res.status(500).send("Error logging in. Please try again later.");
     }
+});
+app.get('/logout', (req, res) => {
+    res.render('home');
 });
 
 const port = 5000;

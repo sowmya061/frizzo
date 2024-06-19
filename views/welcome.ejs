@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
-    <title>Home Page</title>
+    <title>Welcome</title>
 </head>
 <body>
     <header class="header">
@@ -19,21 +19,27 @@
                     <i class="ri-close-line nav_close"></i>
                 </div>
             </div>
-            <ul class="nav_menu" id="nav-menu">
-                <li><a href="home.ejs" class="nav_link">Home</a></li>
-                <li><a href="#" class="nav_link">Tools</a></li>
-                <li><a href="#" class="nav_link">Credit Card</a></li>
-                <li><a href="loans.ejs" class="nav_link">Loans</a></li>
-                <li class="nav_item">
-                    <a href="resources.ejs" class="nav_link">Resources</a>
-                    <ul class="dropdown">
-                        <li><a href="#" class="nav_link">Investment</a></li>
-                        <li><a href="#" class="nav_link">Retirement</a></li>
+            <ul class="user login" id="user-login">
+                <li class="nav_user">
+                    <i class="ri-user-3-line"></i>
+                    <a href="resources.ejs" class="userlogout">Profile</a>
+                    <ul class="dropdown-user">
+                        <li><a href="/logout" class="user-navlink">Logout</a></li>
+                        <li><a href="#" class="user-navlink">Edit Profile</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul>            
         </nav>
     </header>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="/welcome" class="active">Dashboard</a></li>
+                <li><a href="/budget">Budget</a></li>
+                <li><a href="/transaction">Transaction</a></li>
+                <li><a href="/Coins">Coins</a></li>
+            </ul>
+        </div>
     <script src="script.js"></script>
 </body>
 </html>

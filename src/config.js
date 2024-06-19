@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 // Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/login", {
   useNewUrlParser: true,
@@ -23,9 +22,7 @@ const loginSchema = new mongoose.Schema({
     required: true
   }
 });
-
 // Create model based on schema
 const User = mongoose.model("User", loginSchema);
-
 // Export model
 module.exports = User;

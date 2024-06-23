@@ -3,7 +3,7 @@ import { SidebarData } from './SidebarData';
 import './Navbar.css';
 
 function Navbar() {
-  const [sidebarOpen, setSidebarOpen] = useState(true); // State variable for sidebar visibility
+  const [sidebarOpen, setSidebarOpen] = useState(true); 
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -21,7 +21,7 @@ function Navbar() {
               id={window.location.pathname === val.link ? 'active' : ''}
               onClick={() => {
                 window.location.pathname = val.link;
-                toggleSidebar(); // Close sidebar after clicking an item
+                toggleSidebar(); 
               }}
             >
               <div className='nav-icon'>{val.icon}</div>

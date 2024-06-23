@@ -1,0 +1,54 @@
+.content{
+ background-color: #010326;
+}
+
+.frizzo-logo{
+    height: 100px;
+    background-color: #010326;
+}
+
+.nav-elements{
+    padding: 3px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #010326;
+    color: rgb(147, 146, 146);
+}
+
+.nav-elements #active{
+    background-color:#660173;
+    color: white;
+    padding: 5px 0px;
+    border-radius: 15px;
+    width: 250px;
+    align-items: center;
+    box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.155),
+    3px 3px 6px rgba(0, 0, 0, 0.993);
+ 
+
+}
+
+.nav-row{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 0;
+    height: auto;
+    font-size: 1rem;
+    gap: 12px;
+}
+
+.nav-icon{
+    display: flex;
+    padding: 0;
+    margin-left: 15px;
+    align-items: center;
+    font-size: 1.8rem !important;
+}
+
+.nav-title{
+    font-size: 1.2rem;
+    align-self: center;
+}

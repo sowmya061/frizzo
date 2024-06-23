@@ -7,19 +7,21 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #000000;
+    color: #fff; 
 }
-
-ul{
+ul {
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
+    color: inherit; 
 }
 h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: #ccc;
 }
-.main-content{
+.main-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,8 +166,8 @@ p {
         display: block;
     }
 }
-.userlogout{
-    color:#fff;
+.userlogout {
+    color: #fff;
 }
 .nav_user {
     list-style-type: none;
@@ -216,6 +218,10 @@ p {
     flex-direction: column;
     justify-content: space-between; 
     box-shadow: 5px 5px 15px #6e007a; 
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
 .sidebar-menu {
     list-style-type: none;
@@ -232,15 +238,61 @@ p {
     padding: 10px;
 }
 .sidebar-menu li a:hover {
-    background-color: #555;
+    background-color:  #6e007a;
 }
-.sidebar-menu li a {
-    color: #fff;
+.monthly {
+    position: fixed;
+    top: 0;
+    left: 250px; 
+    width: calc(100% - 250px); 
+    background-color: #000000;
+    padding: 10px 20px;
+    z-index: 998;
+}
+.months {
+    overflow-x: auto; 
+}
+.months-monthly {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+.months-monthly li {
+    margin-right: 10px; 
+}
+.months-monthly li a {
     text-decoration: none;
-    display: block;
-    padding: 10px;
+    color: #fff;
+    padding: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.sidebar-menu li a:hover {
-    background-color: #555;
+.months-monthly li a:hover {
+    background-color:  #6e007a;
+    color: #000; 
+}
+.content {
+    margin-top: 60px;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto; 
+    margin-left: 250px; 
+}
+.add-transaction-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.add-transaction-btn:hover {
+    background-color: #218838;
 }

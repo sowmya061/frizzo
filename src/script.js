@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const burgerIcon = document.querySelector('.nav_burger');
     const closeIcon = document.querySelector('.nav_close');
-
     toggleButton.addEventListener('click', () => {
         navMenu.classList.toggle('show-menu');
         burgerIcon.classList.toggle('hide');

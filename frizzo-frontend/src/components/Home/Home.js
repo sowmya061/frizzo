@@ -1,60 +1,40 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// Home.js
+import React from 'react';
 import './Home.css';
+import Header from './Header';
+import Contact from './Contact';
+import Explore from './Explore';
+//import landing_page from '../images/landing_page.png';
+//import alt1 from '../images/alt1.png';
+import alt2 from '../images/alt2.png';
+
 
 function Home() {
-  const [navSelected, setNavSelected] = useState('Home');
-
-  const handleNavClick = (value) => {
-    setNavSelected(value);
-  };
-
   return (
     <div>
-      <Link to="/"></Link>
-      <div className='home-nav'>
-        <div className='home-nav-logo'>Logo</div>
-        <div className='home-nav-el'>
-          <a 
-            className={navSelected === 'Home' ? 'active' : ''}
-            onClick={() => handleNavClick('Home')}
-          >
-            Home
-          </a>
-          <a 
-            className={navSelected === 'Transactions' ? 'active' : ''}
-            onClick={() => handleNavClick('Transactions')}
-          >
-            Transactions
-          </a>
-          <a 
-            className={navSelected === 'Budget Planning' ? 'active' : ''}
-            onClick={() => handleNavClick('Budget Planning')}
-          >
-            Budget Planning
-          </a>
-          <a 
-            className={navSelected === 'Resources and Investments' ? 'active' : ''}
-            onClick={() => handleNavClick('Resources and Investments')}
-          >
-            Resources and Investments
-          </a>
-          <a 
-            className={navSelected === 'Contact Us' ? 'active' : ''}
-            onClick={() => handleNavClick('Contact Us')}
-          >
-            Contact Us
-          </a>
-          <a 
-            className={navSelected === 'Login' ? 'active' : ''}
-            onClick={() => handleNavClick('Login')}
-          >
-            Login
-          </a>
+      <Header />
+      <div id='home-section' className='landing-section'>
+        <div className='landing-text'>
+          <p>Take control of your finances</p>
+          <div className='landing-des'>
+            <span>Achieve your financial goals with easy budget tracking and management on our website</span>
+          </div>
+          <div className='landing-btns'>
+            <button>Get Started</button>
+            <button>Learn More</button>
+          </div>
+        </div>
+        <div className='landing-img'>
+          <img src={alt2} alt='landing'></img>
         </div>
       </div>
-      <div>
-        Take control of your finances
+
+      <div id='explore-section' className='explore-section'>
+        <Explore/>
+      </div>
+
+      <div id='contact-section'>
+        <Contact />
       </div>
     </div>
   );

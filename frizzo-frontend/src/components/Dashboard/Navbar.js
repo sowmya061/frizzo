@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
       <div className='frizzo-logo'></div>
-      <div>
+      <div className='nav-el-container'>
         <ul className='nav-elements'>
           {SidebarData.map((val, key) => (
             <li

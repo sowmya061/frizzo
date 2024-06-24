@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Transactions from './components/Transactions/Transactions';
 import BudgetPlanning from './components/BudgetPlanning/BudgetPlanning';
 import Coins from './components/Coins/Coins';
+import Notifications from './components/Notifications/Notifications';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/budgeting" element={<BudgetPlanning />} />
           <Route path="/coins" element={<Coins/>} />
+          <Route path="/dashboard/notifications" element={<Notifications/>} />
 
 
         </Routes>

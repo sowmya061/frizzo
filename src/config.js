@@ -10,7 +10,6 @@ mongoose.connect("mongodb://localhost:27017/login", {
 .catch((err) => {
   console.error("Database connection error:", err);
 });
-
 // Create schema
 const loginSchema = new mongoose.Schema({
   name: {

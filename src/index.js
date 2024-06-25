@@ -47,7 +47,6 @@ app.post('/login', async (req, res) => {
             return res.send('Incorrect password');
         }
         res.render('welcome'); 
-
     } catch (error) {
         console.error("Error logging in:", error);
         res.status(500).send("Error logging in. Please try again later.");
@@ -56,8 +55,15 @@ app.post('/login', async (req, res) => {
 app.get('/logout', (req, res) => {
     res.render('home');
 });
+// front-end
 
 const port = 5001;
+
+app.get('/transaction',(req,res)=>{
+    res.render('transaction');
+})
+const port = 5000;
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

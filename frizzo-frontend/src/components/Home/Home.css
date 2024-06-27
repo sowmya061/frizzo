@@ -1,0 +1,82 @@
+
+.landing-section {
+    display: flex;
+    margin: 0px 0px 0px 80px; 
+    width: 60%;
+    padding-top: 8rem; 
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+
+  
+  .landing-text p {
+    font-size: 4rem;
+    color: #54aeb3;
+    font-family: Nunito;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+  .landing-des {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    width: 85%;
+    color: white;
+    font-family: Poppins;
+    border-left: solid 0.3rem #10757a;
+    padding-left: 1.2rem;
+  }
+
+  .landing-img {
+    width: 90%; 
+    text-align: right; 
+    perspective: 1000px;
+  }
+  
+  .landing-img img {
+    width: 180%; 
+    height: 90%; 
+    border-radius: 10px; 
+    margin-left: 100px;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    transform: rotateY(0deg) rotateX(deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .landing-img img:hover {
+    transform: rotateY(-10deg) rotateX(0deg) rotateZ(0deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    margin-left: 90px;
+  }
+  
+
+  .landing-btns {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  
+  .landing-btns button {
+    font-size: 1.3rem;
+    background-color: #10757a;
+    color: white;
+    border: 0.05rem solid white;
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: transform 0.2s ease;
+
+  }
+  
+  .landing-btns button:hover {
+    background-color:#10757aa3;
+    box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.678);
+    transform: scale(1.05); 
+  }
+  
+ 
+  
+  
+  
+  

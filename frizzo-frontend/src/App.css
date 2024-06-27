@@ -1,0 +1,13 @@
+/* Apply box-sizing: border-box globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset default padding and margin */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

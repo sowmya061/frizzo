@@ -1,13 +1,20 @@
 const express = require('express');
-const path = require('path');
+const cors=require('cors');
 const bcrypt = require('bcrypt');
-const collection = require("./config"); // Assuming this is your MongoDB collection model
-const app = express();
+const User = require('./config'); // Import User model
+const Transaction = require('./transactiondb'); // Import Transaction model
 
+const app = express();
+const port = 5000;
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+
+// CORS
+app.use(cors());
 
 // Routes for rendering pages
 app.get('/', (req, res) => {
@@ -26,14 +33,14 @@ app.get('/transaction', (req, res) => {
 app.post("/signup", async (req, res) => {
     try {
         const { username, password } = req.body;
-        const existingUser = await collection.findOne({ name: username });
+        const existingUser = await User.findOne({ name: username });
 
         if (existingUser) {
             return res.send("User already exists");
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new collection({
+        const newUser = new User({
             name: username,
             password: hashedPassword
         });
@@ -51,7 +58,7 @@ app.post("/signup", async (req, res) => {
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
-        const user = await collection.findOne({ name: username });
+        const user = await User.findOne({ name: username });
 
         if (!user) {
             return res.send('User not found');
@@ -70,7 +77,35 @@ app.post('/login', async (req, res) => {
     }
 });
 
-const port = 5000;
+// Transaction endpoints
+app.post('/api/transaction', async (req, res) => {
+    const { date, expensetype, month, amount } = req.body;
+
+    try {
+        const newTransaction = new Transaction({
+            date,
+            expensetype,
+            month,
+            amount
+        });
+        console.log('hi from db');
+        const savedTransaction = await newTransaction.save();
+        res.status(200).json(savedTransaction);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
+app.get('/transaction', (req, res) => {
+    res.render('transaction');
+});
+
+// Logout endpoint (not implemented in your code)
+app.get('/logout', (req, res) => {
+    res.render('home');
+});
+
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

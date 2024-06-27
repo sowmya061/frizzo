@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* background-image: linear-gradient( to right, #040404 , #040404d7 , #040404bf , #04040492,  #0404047a, #04040465, #0404046a ); */
+  background-color: rgb(24, 24, 24);
+
+}
+
+
+
+.content {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-bar{
+  border-right: solid rgba(75, 74, 74, 0.55);
+  height: 100%;
+}

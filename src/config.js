@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Define schema
+
 const loginSchema = new Schema({
   name: {
     type: String,
@@ -13,8 +13,6 @@ const loginSchema = new Schema({
   }
 });
 
-// Create model based on schema
 const User = mongoose.model("User", loginSchema);
 
-// Export model
 module.exports = User;

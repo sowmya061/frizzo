@@ -4,36 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet">
+    <link href="/public/home.css" rel="stylesheet">
+    <link href="/public/header.css" rel="stylesheet">
+    <link href="/public/explore.css" rel="stylesheet">
+    <link href="/public/contact.css" rel="stylesheet">
     <title>Home Page</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav_data">
-                <a href="#" class="nav_logo">
-                    <i class="ri-planet-line"></i>Frizzo
-                </a>
-                <div class="nav_toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav_burger"></i>
-                    <i class="ri-close-line nav_close"></i>
+    <header class="home-nav">
+        <div class="home-nav-logo">
+            <i class="ri-planet-line"></i> Frizzo
+        </div>
+        <div class="home-nav-el">
+            <a href="#home-section" class="nav_link">Home</a>
+            <a href="#explore-section" class="nav_link">Explore</a>
+            <a href="#contact-section" class="nav_link">Contact</a>
+        </div>
+    </header>
+    <div id='home-section' class='landing-section'>
+        <div class='landing-text'>
+            <p>Take control of your finances</p>
+            <div class='landing-des'>
+                <span>Achieve your financial goals with easy budget tracking and management on our website</span>
+            </div>
+            <div class='landing-btns'>
+                <button onclick="handleGetStarted()" id="get-started-id">Get Started</button>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class='landing-img'>
+            <img src="/images/alt2.png" alt='landing'>
+        </div>
+    </div>
+    <div id='explore-section' class='explore-section'>
+        <div>
+            <div class='explore-heading'>
+                <h1>Features</h1>
+                <h4>Empower your financial journey</h4>
+            </div>
+            <div class='features-container'>
+                <div class='each-feature'>
+                    <div>
+                        <i class="icon-park-outline:transaction explore-icon"></i>
+                    </div>
+                    <div>
+                        <h2>Transactions</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</span>
+                    </div>
+                </div>
+                <div class='each-feature'>
+                    <div>
+                        <i class="grommet-icons:resources explore-icon"></i>
+                    </div>
+                    <div>
+                        <h2>Resources & Investments</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</span>
+                    </div>
+                </div>
+                <div class='each-feature'>
+                    <div>
+                        <i class="heroicons:chart-pie explore-icon"></i>
+                    </div>
+                    <div>
+                        <h2>Budget Planning</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</span>
+                    </div>
+                </div>
+                <div class='each-feature'>
+                    <div>
+                        <i class="et:piechart explore-icon"></i>
+                    </div>
+                    <div>
+                        <h2>Something</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</span>
+                    </div>
                 </div>
             </div>
-            <ul class="nav_menu" id="nav-menu">
-                <li><a href="home.ejs" class="nav_link">Home</a></li>
-                <li><a href="#" class="nav_link">Tools</a></li>
-                <li><a href="#" class="nav_link">Credit Card</a></li>
-                <li><a href="loans.ejs" class="nav_link">Loans</a></li>
-                <li class="nav_item">
-                    <a href="resources.ejs" class="nav_link">Resources</a>
-                    <ul class="dropdown">
-                        <li><a href="#" class="nav_link">Investment</a></li>
-                        <li><a href="#" class="nav_link">Retirement</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <script src="script.js"></script>
+        </div>
+    </div>
+    <div id="contact-section"> 
+        <div className="contact-info">
+            <div className="contact-heading">
+                <h1>Got doubts? We're here to help!</h1>
+                <div className="contact-mail">
+                    <h2>Email id:</h2>
+                    <span>abc@gmail.com</span>
+                </div>
+                <div className="contact-socials">
+                    <h2>Follow us on socials:</h2>
+                    <div className="contact-icons">
+                        <Icon icon="akar-icons:instagram-fill" className="individ-icon"/>
+                        <Icon icon="teenyicons:linkedin-outline" className="individ-icon"/>
+                        <Icon icon="ri:twitter-x-line" className="individ-icon"/>
+                    </div>
+                </div>
+            </div>
+            <div className="contact-form">
+                <form>
+                    <input  type="text" required placeholder="NAME" />
+                    <input  type="text" required placeholder="EMAIL ID" />
+                    <textarea rows={8} placeholder="Message..." />
+                    <button>SUBMIT</button>
+                </form>
+            </div> 
+        </div>
+        <div className="contact-space">
+        </div>
+    </div>
+    </body>
+    <script>
+        function handleGetStarted(){
+            res.render('/login');
+        }
+        document.getElementById('get-started-button').addEventListener('click',handleGetStarted);
+    </script>
 </body>
 </html>

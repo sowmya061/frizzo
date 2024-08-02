@@ -1,0 +1,54 @@
+
+.explore-section {
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+    color: white;
+}
+
+.explore-heading {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Nunito;
+    font-weight: 400;
+}
+
+.explore-heading h1, .explore-heading h4 {
+    margin: 0!important;
+    padding: 0;
+}
+
+.features-container {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.each-feature {
+    display: flex;
+    align-items: center;
+    background-color: rgba(83, 82, 82, 0.2);
+    border: 1px solid;
+    border-radius: 5px;
+    height: 9rem;
+    width: 30rem;
+    font-family: Merriweather;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.each-feature:hover {
+    transform: translateY(-3px) scale(1.03); 
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.1), 7px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.explore-icon {
+    height: 7rem;
+    width: 10rem;
+    color: #10757a;
+}
+.each-feature h2 {
+    margin: 0;
+    font-family: Nunito;
+}

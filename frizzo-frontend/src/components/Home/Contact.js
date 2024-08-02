@@ -33,9 +33,7 @@ export default function Contact() {
                 </div> 
             </div>
             <div className="contact-space">
-
             </div>
-
         </div>
     );
 }

@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
-// Connect to MongoDB (assuming this is the same connection as for User)
 mongoose.connect("mongodb://localhost:27017/finance", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -13,7 +11,6 @@ mongoose.connect("mongodb://localhost:27017/finance", {
   console.error("Database connection error:", err);
 });
 
-// Define schema
 const transactionSchema = new Schema({
   date: { type: String, required: true },
   expenseType: { type: String, required: true },
@@ -21,8 +18,5 @@ const transactionSchema = new Schema({
   amount: { type: Number, required: true }
 });
 
-// Create model based on schema
 const Transaction = mongoose.model('Transaction', transactionSchema);
-
-// Export model
 module.exports = Transaction;

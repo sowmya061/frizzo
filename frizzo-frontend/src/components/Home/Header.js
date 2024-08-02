@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 //import { Link } from 'react-router-dom';
 import './Header.css';
-
 function Header() {
   const [navSelected, setNavSelected] = useState('Home');
-
   const handleNavClick = (value) => {
     setNavSelected(value);
   };
-
   return (
     <div className='home-nav'>
       <div className='home-nav-logo'>Logo</div>
@@ -38,5 +35,4 @@ function Header() {
     </div>
   );
 }
-
 export default Header;

@@ -5,41 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
+    <link href="learning.css" rel="stylesheet">
     <title>Welcome</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav_data">
-                <a href="#" class="nav_logo">
-                    <i class="ri-planet-line"></i>Frizzo
-                </a>
-                <div class="nav_toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav_burger"></i>
-                    <i class="ri-close-line nav_close"></i>
-                </div>
-            </div>
-            <ul class="user login" id="user-login">
-                <li class="nav_user">
-                    <i class="ri-user-3-line"></i>
-                    <a href="resources.ejs" class="userlogout">Profile</a>
-                    <ul class="dropdown-user">
-                        <li><a href="/logout" class="user-navlink">Logout</a></li>
-                        <li><a href="#" class="user-navlink">Edit Profile</a></li>
-                    </ul>
-                </li>
-            </ul>            
-        </nav>
-    </header>
-    <div class="dashboard-container">
-        <div class="sidebar">
-            <ul class="sidebar-menu">
-                <li><a href="/welcome" class="active">Dashboard</a></li>
-                <li><a href="/budget">Budget</a></li>
-                <li><a href="/transaction">Transaction</a></li>
-                <li><a href="/Coins">Coins</a></li>
-            </ul>
+    <div class="sidebar">
+        <div class="sidebar-top">
+          <div id="time" class="time"></div>
         </div>
+        <ul class="sidebar-menu">
+          <li><a href="/welcome" class="active">Dashboard</a></li>
+          <li><a href="/budget">Budget</a></li>
+          <li><a href="/transaction">Transaction</a></li>
+          <li><a href="/Coins">Coins</a></li>
+          <li><a href="/reminders">Reminders</a></li>
+          <li><a href="/Learning">Learning</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

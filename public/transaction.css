@@ -1,4 +1,3 @@
-/* Reset and general styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body {
     color: #fff;
     line-height: 1.6;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
 ul {
@@ -22,14 +21,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #ccc;
 }
-
-/* Header Styling */
 .header {
     background: #6e007a;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -208,7 +204,6 @@ h2 {
     z-index: 999;
     overflow-y: hidden;
 }
-
 .sidebar-top {
     padding: 50px;
     text-align: center;
@@ -262,17 +257,17 @@ h2 {
 .months-monthly {
     list-style-type: none;
     padding: 500;
-    display: inline-flex; /* Display months in a row */
+    display: inline-flex;
 }
 
 .months-monthly li {
-    margin-right: 20px; /* Adjust space between months */
+    margin-right: 20px;
 }
 
 .months-monthly li a {
     text-decoration: none;
     color: #fff;
-    padding: 8px 12px; /* Increase padding for larger clickable area */
+    padding: 8px 12px;
     transition: background-color 0.3s ease;
 }
 
@@ -282,14 +277,12 @@ h2 {
 }
 
 .content {
-    margin-top: 60px; /* Ensure content doesn't overlap with header */
+    margin-top: 60px; 
     padding: 20px;
     flex: 1;
     overflow-y: auto;
     margin-left: 250px;
 }
-
-/* Button and Form Popup Styling */
 .open-button {
     background-color: #4fd44d;
     color: white;
@@ -391,4 +384,38 @@ h2 {
     .content {
         margin-left: 150px;
     }
+}
+.content {
+    margin-left: 250px;
+    padding: 50px;
+}
+
+.dashboard-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #151313;
+    padding: 10px;
+    border-radius: 5px;
+}
+.dashboard-content img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.dashboard-content .info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dashboard-content .date {
+    flex: 1;
+}
+
+.dashboard-content .amount {
+    color: white;
+    background-color: #6e007a;
+    padding: 5px 10px;
+    border-radius: 5px;
 }

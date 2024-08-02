@@ -1,101 +1,38 @@
-
-#contact section{
-    height: 100%;
-    margin-top: 0;
-    margin-bottom: 100px !important;
-    padding-bottom: 10rem;
+.home-nav {
+  display: flex;
+  color: white;
+  height: 4rem;
+  align-items: center;
+  padding: 0px 12px;
+  box-shadow: -3px -3px 10px #ffffff74, 3px 3px 10px rgba(0, 0, 0, 0.993);
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  z-index: 1000; 
+  background-color: rgb(18, 18, 18);
 
 }
-  
-.contact-info{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
-    font-family: merriweather;
-  }
-  
-  .contact-heading{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 250px;
-    color: white;
-  
-    h1{
-      font-size: 40px;
-      color: #54aeb3;
-   
-    }
-  
-    .contact-icons{
-      display: flex;
-      padding-top: 15px;
-      gap: 15px;
-      font-size: 25px;
-    }
-    .individ-icon:hover{
-      border-radius: 5px;
-      box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.678);
-      transform: scale(1.1);
-      color: #10757a;
-    }
-  }
 
-  .contact-mail h2{
-    padding: 0;
-    margin: 0;
-  }
+.home-nav-logo {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
 
-  .contact-socials h2{
-    padding: 0;
-    margin: 0;
-  }
-  
-  form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 400px;
-    padding-top: 1rem;
-  
-    input{
-      height: 30px;
-      padding: 10px;
-      border-radius: 5px;
-      font-family: montserrat;
-      border:solid 1.5px #10757a;
-    }
-  
-    textarea{
-      padding: 10px;
-      font-size: medium;
-      font-family: montserrat;
-      border:solid 1.5px #10757a;
-    }
-  
-    button{
-      padding: 5px;
-      background-color: #10757a;
-      border:  solid 1px white;
-      color: white;
-      font-family: montserrat;
-      border-radius: 4px;
-      transition: transform 0.2s ease;
+.home-nav-el {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  font-size: 1.2rem;
+  margin-left: 25rem;
+  font-family: montserrat;
+}
 
-    }
-  
-    button:hover{
-      background-color: #10757ab9;
-      color: #ffffff;
-      box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.678);
-      transform: scale(1.01);
+.home-nav-el a {
+  text-decoration: none !important;
+  color: white;
+}
 
-    }
-  }
-  
-  .contact-space{
-    height: 5rem;
-  }
-  
- 
+.home-nav-el a.active {
+  border-bottom: 0.2rem solid #10757a;
+  padding-bottom: 0.2rem;
+}
